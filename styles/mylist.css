@@ -1,0 +1,2 @@
+@keyframes vm-spin { to { transform: rotate(360deg); } }
+html, body { margin: 0; padding: 0; background: #0f0f10; }

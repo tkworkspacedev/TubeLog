@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubeLog プライバシーポリシー / Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      max-width: 48rem;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8e8; background: #121212; }
+      a { color: #8ab4f8; }
+      hr { border-color: #444; }
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.25rem; }
+    h3 { font-size: 1rem; margin-top: 1.25rem; }
+    .meta { color: #666; font-size: 0.9rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 0.75rem 0; }
+    th, td { border: 1px solid #ccc; padding: 0.45rem 0.6rem; text-align: left; vertical-align: top; }
+    th { background: rgba(0,0,0,0.05); }
+    nav { margin: 1rem 0 1.5rem; font-size: 0.95rem; }
+    nav a { margin-right: 1rem; }
+    ul { padding-left: 1.25rem; }
+    .en-block { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <h1>TubeLog プライバシーポリシー</h1>
+  <p class="meta">最終更新日: 2026年6月5日</p>
+
+  <nav>
+    <a href="#ja">日本語</a>
+    <a href="#en">English</a>
+  </nav>
+
+  <section id="ja" lang="ja">
+
+    <p>
+      本ポリシーは、Chrome 拡張機能「TubeLog」（以下「本拡張」）の利用に伴い取り扱う情報について説明するものです。
+      本拡張は <strong>YouTube および Google LLC の公式製品ではありません</strong>。
+    </p>
+
+    <h2>1. 運営者</h2>
+    <p>
+      本拡張の開発・提供: TubeLog 開発者<br>
+      お問い合わせ: <a href="https://github.com/tkworkspacedev/TubeLog/issues">GitHub Issues</a>
+    </p>
+
+    <h2>2. 収集・保存する情報の概要</h2>
+    <p>本拡張は、広告配信や行動分析のためのトラッキングを行いません（Firebase 等の分析連携は使用しません）。</p>
+
+    <table>
+      <thead>
+        <tr><th>データの種類</th><th>保存場所</th><th>送信先（第三者）</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>マイリスト（フォルダ・動画・メモ等）</td>
+          <td>端末内（<code>chrome.storage.local</code> 等）</td>
+          <td>なし（ユーザー操作時を除く）</td>
+        </tr>
+        <tr>
+          <td>チャンネル一覧・UI 設定</td>
+          <td>端末内</td>
+          <td>なし</td>
+        </tr>
+        <tr>
+          <td>YouTube Data API キー（任意入力）</td>
+          <td>端末内</td>
+          <td>ユーザー操作時に Google（<code>googleapis.com</code>）のみ</td>
+        </tr>
+        <tr>
+          <td>Google アカウント情報（メールアドレス等）</td>
+          <td>端末内</td>
+          <td>Google ログイン時に Google OAuth のみ</td>
+        </tr>
+        <tr>
+          <td>バックアップ JSON</td>
+          <td>ユーザーの Google ドライブ（アプリケーションデータ領域）</td>
+          <td>ユーザーがバックアップ実行時に Google のみ</td>
+        </tr>
+        <tr>
+          <td>ライセンスキー・認証結果</td>
+          <td>端末内</td>
+          <td>ユーザーが認証実行時に Polar（<code>api.polar.sh</code>）のみ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. 利用目的</h2>
+    <ul>
+      <li>マイリスト・チャンネル一覧の管理、表示、同期</li>
+      <li>ユーザー設定の保存・復元</li>
+      <li>ユーザーが任意で設定した YouTube Data API による動画・再生リスト情報の取得</li>
+      <li>ユーザーが任意で有効化した Google ドライブへのバックアップ・復元</li>
+      <li>ユーザーが入力した有料ライセンス（Polar）の検証</li>
+      <li>YouTube 上での拡張 UI の提供（ユーザーが YouTube を閲覧しているページ上）</li>
+    </ul>
+
+    <h3>3.1 非公式・非提携の表示</h3>
+    <p>
+      TubeLog は YouTube および Google LLC の公式製品・提携サービスではありません。
+      YouTube は Google LLC の商標です。
+    </p>
+
+    <h3>3.2 YouTube 利用規約への同意</h3>
+    <p>
+      本拡張の利用者は、
+      <a href="https://www.youtube.com/t/terms">YouTube 利用規約</a> および
+      <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API サービス利用規約</a>
+      を遵守する必要があります。
+      本拡張は、規約で禁止される自動スクレイピングやロボットによるアクセスは行いません。
+      YouTube Data API を利用する場合は、利用者自身の Google Cloud プロジェクトに適用される条件（クォータ等）にも従います。
+    </p>
+
+    <h2>4. 第三者サービス</h2>
+
+    <h3>4.1 Google</h3>
+    <ul>
+      <li><strong>Google ドライブ（appdata）</strong>: ユーザーがログインしバックアップを実行した場合のみ、当該 Google アカウントのドライブ内アプリデータ領域に JSON を保存します。</li>
+      <li><strong>Google OAuth</strong>: ドライブ連携時に <code>drive.appdata</code> スコープのみを要求します。認証後、設定画面のログイン表示用に Google Drive API（<code>about.get</code>）からメールアドレスを取得し、端末内に保存することがあります。</li>
+      <li><strong>YouTube Data API v3</strong>: ユーザーが API キーを設定した場合のみ、キーを用いて Google の API を呼び出します。クォータと利用条件はユーザーの Google Cloud プロジェクトに適用されます。キーは端末内に保存され、運営者のサーバーには送信しません。JSON エクスポート・ドライブバックアップへのキー含有は、同期設定でユーザーが明示的にオンにし同意した場合のみです。</li>
+    </ul>
+
+    <h3>4.2 Polar</h3>
+    <p>
+      有料機能（プレミアムプラン）の販売・請求は <strong>Polar 経由</strong>で行われ、Google および YouTube による販売・請求ではありません。
+      支払い・返金に関するお問い合わせは Polar の購入ページおよび本ポリシー記載の運営者へご連絡ください。
+    </p>
+    <p>
+      有料機能を利用する場合、ユーザーが入力したライセンスキーを HTTPS で Polar の API に送信し、有効性を検証します。
+      検証結果は端末内にキャッシュします（再検証の間隔は最大 24 時間）。
+    </p>
+
+    <h3>4.3 個人情報の販売</h3>
+    <p>本拡張は、ユーザーの個人情報を販売しません。</p>
+
+    <h2>5. Google API から受け取った情報の利用（Limited Use）</h2>
+    <p>
+      本拡張が Google API から受け取った情報の利用および転送は、
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>
+      に加え、限定使用要件（Limited Use）を含む
+      <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store ユーザーデータに関するポリシー</a>
+      に従います。
+    </p>
+
+    <h2>6. データの保存期間・削除</h2>
+    <ul>
+      <li>端末内データは、ユーザーが拡張のデータを削除する、拡張をアンインストールする、またはブラウザの拡張データを消去するまで保持されます。</li>
+      <li>Google ドライブ上のバックアップは、ユーザーがドライブ上で削除するまで保持されます。</li>
+      <li>Google ドライブ連携のログアウトは、設定画面から実行できます。</li>
+    </ul>
+
+    <h2>7. セキュリティ</h2>
+    <p>
+      通信は可能な限り HTTPS を使用します。API キー・ライセンスキー・バックアップデータは端末内またはユーザーが選択した Google アカウント配下に保存され、
+      運営者による中央サーバーへの一括収集は行いません。
+    </p>
+
+    <h2>8. ポリシーの変更</h2>
+    <p>本ポリシーは必要に応じて更新します。重要な変更がある場合は、本ページの更新日を変更します。</p>
+
+    <h2>9. お問い合わせ</h2>
+    <p>
+      本ポリシーに関するお問い合わせは
+      <a href="https://github.com/tkworkspacedev/TubeLog/issues">GitHub Issues</a>
+      までご連絡ください。
+    </p>
+  </section>
+
+  <section id="en" class="en-block" lang="en">
+
+    <h1>TubeLog Privacy Policy</h1>
+    <p class="meta">Last updated: June 5, 2026</p>
+
+    <p>
+      This policy describes how the Chrome extension <strong>TubeLog</strong> (the “Extension”) handles information.
+      The Extension is <strong>not an official product of YouTube or Google LLC</strong>.
+    </p>
+
+    <h2>1. Operator</h2>
+    <p>
+      Developer: TubeLog developer<br>
+      Contact: <a href="https://github.com/tkworkspacedev/TubeLog/issues">GitHub Issues</a>
+    </p>
+
+    <h2>2. Data we process</h2>
+    <p>The Extension does not use analytics or advertising trackers.</p>
+
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Storage</th><th>Third parties</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Playlists, folders, notes, channel lists, UI settings</td>
+          <td>On your device (<code>chrome.storage.local</code>, etc.)</td>
+          <td>None (unless you initiate an action below)</td>
+        </tr>
+        <tr>
+          <td>YouTube Data API key (optional)</td>
+          <td>On your device</td>
+          <td>Google (<code>googleapis.com</code>) when you use API features</td>
+        </tr>
+        <tr>
+          <td>Google account info (email address)</td>
+          <td>On your device</td>
+          <td>Google OAuth when you sign in for Drive backup</td>
+        </tr>
+        <tr>
+          <td>Backup JSON</td>
+          <td>Your Google Drive app data folder</td>
+          <td>Google when you run backup</td>
+        </tr>
+        <tr>
+          <td>License key and validation result</td>
+          <td>On your device</td>
+          <td>Polar (<code>api.polar.sh</code>) when you validate a license</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Purposes</h2>
+    <ul>
+      <li>Manage and display your playlists and channel lists</li>
+      <li>Store and restore settings</li>
+      <li>Fetch YouTube metadata when you provide an API key</li>
+      <li>Backup and restore to Google Drive when you enable it</li>
+      <li>Validate premium licenses via Polar when you enter a key</li>
+      <li>Provide Extension UI on YouTube pages you visit</li>
+    </ul>
+
+    <h3>3.1 Unofficial status</h3>
+    <p>
+      TubeLog is not an official or affiliated product of YouTube or Google LLC.
+      YouTube is a trademark of Google LLC.
+    </p>
+
+    <h3>3.2 YouTube terms of use</h3>
+    <p>
+      By using the Extension, you agree to comply with the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the
+      <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service">YouTube API Services Terms of Service</a>.
+      The Extension does not perform prohibited automated scraping or robot access.
+      If you use the YouTube Data API, you must also comply with the terms of your Google Cloud project (including quota).
+    </p>
+
+    <h2>4. Third-party services</h2>
+    <p>We do not sell your personal information.</p>
+    <p>
+      <strong>Google:</strong> Drive app data backup (<code>drive.appdata</code> scope only), email for login display via Drive <code>about.get</code>, and optional YouTube Data API calls using your key (stored on your device only; not sent to our servers). Your API key is included in export/backup files only if you enable that option in Sync settings and confirm. Quota applies to your Google Cloud project.<br>
+      <strong>Polar:</strong> Premium plans are sold and billed through Polar, not by Google or YouTube. Contact Polar checkout or the operator in this policy for payment and refund inquiries. License validation over HTTPS when you submit a license key.
+    </p>
+
+    <h2>5. Google API Limited Use</h2>
+    <p>
+      The Extension’s use and transfer of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements, and the
+      <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>.
+    </p>
+
+    <h2>6. Retention and deletion</h2>
+    <p>
+      Local data remains until you clear extension data or uninstall the Extension.
+      Drive backups remain until you delete them in Google Drive.
+      You can sign out of Google Drive backup in the Extension settings.
+    </p>
+
+    <h2>7. Changes</h2>
+    <p>We may update this policy; the “Last updated” date above will change when we do.</p>
+
+    <h2>8. Contact</h2>
+    <p>
+      Questions: <a href="https://github.com/tkworkspacedev/TubeLog/issues">GitHub Issues</a>
+    </p>
+  </section>
+
+</body>
+</html>

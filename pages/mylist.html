@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>マイリスト</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon16.png">
+  <link rel="stylesheet" href="../styles/mylist.css">
+</head>
+
+<body>
+  <!-- ローディング表示（content.js の renderMylistPage() が完了したら自動的に消える） -->
+  <div id="vm-app-loading" style="
+    display:none;align-items:center;justify-content:center;
+    height:100vh;background:#0f0f10;color:#cfcfcf;
+    font-family:'Segoe UI',Roboto,'Noto Sans JP',sans-serif;
+    font-size:16px;gap:12px;
+  ">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="animation:vm-spin 1s linear infinite">
+      <circle cx="16" cy="16" r="13" stroke="#444" stroke-width="3" />
+      <path d="M16 3 A13 13 0 0 1 29 16" stroke="#FF0000" stroke-width="3" stroke-linecap="round" />
+    </svg>
+    <span>読み込み中...</span>
+  </div>
+
+  <!--
+    このページは chrome-extension:// で開く完全独自ページです。
+    polyfill.js が GM_* API と chrome.storage キャッシュを初期化し、
+    content.js が __vmIsMylistPage__ フラグを見てマイリストUIを描画します。
+  -->
+  <script src="../scripts/mylist-init.js"></script>
+  <script src="../scripts/polyfill.js"></script>
+  <script src="../scripts/content.js"></script>
+</body>
+
+</html>

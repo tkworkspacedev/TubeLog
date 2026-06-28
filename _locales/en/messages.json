@@ -1,0 +1,11 @@
+{
+  "appName": {
+    "message": "TubeLog"
+  },
+  "actionTitle": {
+    "message": "Open My List"
+  },
+  "extensionDesc": {
+    "message": "An extension to manage and sync your YouTube playlists and channels."
+  }
+}

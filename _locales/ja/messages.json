@@ -1,0 +1,11 @@
+{
+  "appName": {
+    "message": "つべろぐ"
+  },
+  "actionTitle": {
+    "message": "マイリストを開く"
+  },
+  "extensionDesc": {
+    "message": "YouTubeのプレイリストとチャンネルを管理・同期する拡張機能です。"
+  }
+}

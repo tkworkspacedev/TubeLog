@@ -1,0 +1,77 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs4GP4I0vyrQPqis0y8JXTIvThN/JvZcIb19UKHMK6rQYnd4Fk6mo8yuoRlqPPEjTf1m9QpiEED9QKRqfh2J8/K5xLRqobZJXJLDVWHGphtxFd8FW7Xe52G/Im0g3xnYYtnmCeQZNzQsd8vh9nfFeA6ZhBvX9YjY6avp15InrSbAZoWfB/UsbYgH1aNT7GZctb+rBGOHAeMcpvVroRVkSZa0z8DZ73eeYIYCWTAIQB8KYylE7jpO73n3U/iFJWl1k3xlz78NAMU3Nu79UxdIGLMMsREERTDtxRuZl0b8enFO3g2Xq6bc6q4Trr1GYMWBsx4LUGRtQryM+CoETx0BBAwIDAQAB",
+  "version": "21.21",
+  "description": "__MSG_extensionDesc__",
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "notifications",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://www.googleapis.com/*",
+    "https://accounts.google.com/*",
+    "https://api.polar.sh/*"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "__MSG_actionTitle__"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "scripts/polyfill.js",
+        "scripts/content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pages/mylist.html",
+        "styles/mylist.css",
+        "pages/custom-list.html",
+        "scripts/channel-list.js",
+        "scripts/content.js",
+        "scripts/polyfill.js",
+        "scripts/mylist-init.js",
+        "scripts/custom-list-init.js",
+        "icons/*.png"
+      ],
+      "matches": [
+        "https://www.youtube.com/*"
+      ]
+    }
+  ],
+  "oauth2": {
+    "client_id": "443994081592-8j47bg3f15fn8937p7o2pljff497vb73.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.appdata"
+    ]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
